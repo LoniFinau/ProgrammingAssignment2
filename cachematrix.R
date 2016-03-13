@@ -1,5 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These two functions together implement the ability to get the inverse of a matrix
+## utilising a cached inverse whenever applicable. Typical usage:
+## > aM <- matrix(sample(10000),100,100)    ## create a test matrix (ensure inversible)
+## > cM <- makeCacheMatrix(aM)              ## initialise the cache matrix
+## > iM <- cacheSolve(cM)                   ## get inverse, from cache if applicable
+## > round(aM %*% iM)                       ## should get identity if all went ok
+
 
 ## Returns an object that represents a matrix with a 'cachable' inverse operation.
 ## Usage: > mInv <- makeCacheMatrix(someMatrix) 
